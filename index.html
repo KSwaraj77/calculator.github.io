@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Calculator</title>
+  </head>
+  <body class="body bg-info bg-opacity-25">
+    
+    
+
+    
+
+
+
+    <div class="container w-50 mt-5 bg-gray-3">
+        <h2 class="text-center text-light pt-3">Calculator</h2>
+        <div class="row ">
+            <div class="col-lg-6 pt-5">
+                <input type="text" class="form-control" id="input1" value="" placeholder="1st Number" aria-label="First name">
+              </div>
+              <div class="col-lg-6 pt-5">
+                <input type="text" class="form-control" id="input2" value="" placeholder="2nd Number" aria-label="Last name">
+              </div>
+              <div class="bg-light m-auto mt-5 mb-3 w-50 text-center rounded-circle">
+                <h3 id="output"></h3>
+            </div>
+            <div class="row text-center pt-5 pb-5">
+                <div class="col-lg-3 pt-3 d-grid">
+                    <button onclick="add()" type="button" class="btn btn-outline-light">Addition</button>
+                </div>
+                <div class="col-lg-3 pt-3 d-grid">
+                    <button onclick="sub()" type="button" class="btn btn-outline-light">Substract</button>
+                </div>
+                <div class="col-lg-3 pt-3 d-grid">
+                    <button onclick="mul()" type="button" class="btn btn-outline-light">Multiply</button>
+                </div>
+                <div class="col-lg-3 pt-3 d-grid">
+                    <button onclick="div()" type="button" class="btn btn-outline-light">Division</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+         function add() {
+            let x= parseInt(document.getElementById("input1").value);
+            let y= parseInt(document.getElementById("input2").value);
+
+            document.getElementById("output").innerHTML = x+y;
+
+        }
+
+        function sub() {
+            let x= parseInt(document.getElementById("input1").value);
+            let y= parseInt(document.getElementById("input2").value);
+
+            document.getElementById("output").innerHTML = x-y;
+            
+        }
+
+        function mul() {
+            let x= parseInt(document.getElementById("input1").value);
+            let y= parseInt(document.getElementById("input2").value);
+
+            document.getElementById("output").innerHTML = x*y;
+            
+        }
+
+        function div() {
+            let x= parseInt(document.getElementById("input1").value);
+            let y= parseInt(document.getElementById("input2").value);
+
+            document.getElementById("output").innerHTML = x/y;
+            
+        }
+
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
